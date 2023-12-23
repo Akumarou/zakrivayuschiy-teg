@@ -23,11 +23,11 @@
   padding-block-start: 102px;
 
   font-family: var(--main-font, sans-serif);
-  font-variation-settings: 'wght' var(--normal-wght, 400);
+  font-variation-settings: "wght" var(--normal-wght, 400);
   line-height: normal;
   color: var(--accent-color, #000);
 
-  background-color: var(--bg-color, #FFF);
+  background-color: var(--bg-color, #fff);
   background-image: var(--bg-image);
   background-size: cover;
   background-attachment: fixed;
@@ -92,7 +92,7 @@
 }
 
 .theme-menu__button::after {
-  content: '';
+  content: "";
 
   position: absolute;
   inset-inline-start: 0;
@@ -123,7 +123,7 @@
 }
 
 .theme-menu__button:disabled::before {
-  content: '▶';
+  content: "▶";
 
   position: absolute;
   inset-block-start: 0;
@@ -157,7 +157,7 @@
   padding: 4px 10px;
 
   font-size: inherit;
-  font-variation-settings: 'wght' var(--bold-wght, 700);
+  font-variation-settings: "wght" var(--bold-wght, 700);
   line-height: normal;
 }
 
@@ -226,10 +226,11 @@
 
   opacity: 0.5;
   mix-blend-mode: hard-light;
-  text-shadow: 0 0 1px var(--label-shadow, #FFF);
+  text-shadow: 0 0 1px var(--label-shadow, #fff);
 }
 
-@supports(text-stroke: 1px var(--label-shadow)) or (-webkit-text-stroke: 1px var(--label-shadow)) {
+@supports (text-stroke: 1px var(--label-shadow)) or
+  (-webkit-text-stroke: 1px var(--label-shadow)) {
   .card__label {
     -webkit-text-stroke: 1px var(--label-shadow);
     text-stroke: 1px var(--label-shadow);
@@ -248,7 +249,7 @@
 }
 
 .paragraph {
-  font-variation-settings: 'wght' var(--normal-wght, 400);
+  font-variation-settings: "wght" var(--normal-wght, 400);
   line-height: 116.667%;
 }
 
@@ -294,12 +295,11 @@
 }
 
 .button:focus-visible {
-  border: 2px solid var(--accent-color);
   box-shadow: 2px 2px 0 var(--accent-color);
 }
 
 .button::before {
-  content: '';
+  content: "";
   position: absolute;
   inline-size: 100%;
   block-size: 100%;
@@ -326,9 +326,6 @@
   font-style: normal;
   font-weight: 400;
   line-height: 90%;
-
-  transition: color 1s ease;
-
   mix-blend-mode: difference;
 }
 
@@ -344,6 +341,13 @@
   inline-size: min(80dvi, 335px);
 
   background-color: var(--bg-color);
+}
+
+.footer__save-button:focus,
+.footer__save-button:focus-within,
+.footer__save-button:focus-visible {
+  outline: 0px solid currentColor;
+  outline-offset: 0px;
 }
 
 .footer__icon {
@@ -404,7 +408,6 @@
   inline-size: 293px;
   padding: 9px;
 }
-
 
 @media (width <=375px) {
   .footer__icon {
